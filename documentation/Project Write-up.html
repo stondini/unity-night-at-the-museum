@@ -1,0 +1,215 @@
+<h1>Introduction</h1>
+Puzzler is a project of Udacity VR Developer nano-degree (term 2).
+The Players has to solve a pattern based puzzle like Simon (https://en.wikipedia.org/wiki/Simon_(game)).
+This write up presents the project achievement process that starts with Persona description, scene sketches & ideas, sound & light environment, user testing and deployment on a device. This entire process was executed iteratively (agile methodology).
+
+Goals of this write up :
+* Game description, ideas and scenarii to be sure the audience will understand all the concepts (sketches and screenshots of a beta version help to materialise).
+* First tests feedback. They are useful to improve the game iteratively.
+* What are the next amazing steps likely to interest the audience.
+
+<h1>Outcome - Checkout the final video</h1>
+
+[https://youtu.be/6pdoxEXERvw](https://youtu.be/6pdoxEXERvw)
+
+<div style="position:relative;height:0;padding-bottom:75.0%">
+<iframe src="https://www.youtube-nocookie.com/embed/mLylusA_xxc?rel=0&amp;ecver=2" width="480" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+</div>
+
+<h2>Persona</h2>
+
+![class|200x200](upload://7gzs6OAcYMoEUGBi8MzWog8BgAD.png)
+<table>
+  <tr>
+    <td>Age:</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Occupation:</td>
+    <td>Banker</td>
+  </tr>
+<tr>
+    <td>Quote:</td>
+     <td>VR could allow me escaping this crazy world.</td>
+  </tr>
+<tr>
+    <td>About:</td>
+     <td>
+
+Steven loves his job even though it's very stressful.To reduce stress, Steven plays non-violent games. He plays even at his job during its pauses or at lunch time. Steven like short but challenging games. He is married and has two children sometimes Steven is playing with.</td>
+  </tr>
+<tr>
+    <td>VR Experience Level:</td>
+    <td>No VR experience but a lot of game playing on computer and mobile device.</td>
+  </tr>
+</table>
+
+<h1>Sketches</h1>
+
+<h2>Swiss Alps</h2>
+The user can visit the must fabulous Swiss Alps Mountains my moving along a path (red line below).<br/><br/>
+<img src="CameraPath.png" width="640px"/>
+
+<h1>Scene</h1>
+Each important mountain is pointed by a <i>pin</i>.
+<lu>
+    <li>A <i>pin</i> shows a mountain name and altitude.</li>
+    <li>The user can <i>click</i> on a <i>pin</i> to display the <b>Wikipedia</b> description on a giant virtual screen.</li>
+    <li>The <i>pins</i> must be always visible to the user. It means, the <i>pins</i> must <i>look at</i> the user/camera at any time.</li>
+    <li>The cloudy skybox improve the scene's reality.</li>
+    <li>The sound of a windy weather improve the scene's reality</li>
+</lu>
+
+<h2>Testing the Scene</h2>
+
+The first test is related to the <i>pin</i> that show a mountain place.<br/>
+The goal of this test is to gather information about the visibility and the understanding of the concept of <i>pin</i>.
+<img src="2018-04-30-Pin.Draft.png" width="640px"/><br/><br/>
+ 
+The tester didn’t like the orb’s size (too big) and the violet spot light.
+He liked the real torch fire effect.
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+  </tr>
+  <tr>
+    <td>How big you think you are in this experience ?</td>
+    <td>The room is big enough. The orbs are too big in my perspective.</td>
+  </tr>
+  <tr>
+    <td>Can you describe the mood / atmosphere ?</td>
+    <td>The walls are painted with gold. I like the torches.</td>
+  </tr>
+  <tr>
+    <td>Is there anything that you’d like to look at but that’s difficult to see ? </td>
+    <td>I cannot really identify what is outside the door. (At the stage, no mountains ans skybox was implemented).</td>
+  </tr>
+  <tr>
+    <td>Tell me about your experience ?  </td>
+    <td>It was a very nice immersive experience.</td>
+  </tr>
+  <tr>
+    <td>Did you enjoy the experience (yes / no) ?  </td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+![2018-04-04-LightTestedOnDevice-1|690x388](upload://hR58AMwiAzylV2yOH3UaM63JlR6.png)
+_Fig.1 : First light environment_
+
+![2018-04-04-LightTestedOnDevice-2|690x388](upload://uFEPkimxtFBw9Lki4tUQxIdD8kc.jpg)
+_Fig.2 : Second light environment_
+
+The tester liked it. Smaller orbs and the blue spot light matches the “light” of the orbs.
+
+<h1>Graphical User Interface</h1>
+<h2>Start UI</h2>
+
+* Introduce the player experience
+* Tell the player what to expect
+* Begin the puzzle
+
+<he>Restart UI</h2>
+
+* Tell the player if he/she has succeeded
+* Give the player to play the game again
+
+![GUI-1|690x276](upload://5jVQoWWSs3murUvcGxBFTCAKbHO.jpeg)
+_Fig.3 : First UI_
+
+![GUI-2|690x303](upload://1WXoxcTwUPER6Clu4J08K9gSxaU.jpeg)
+_Fig.4 : Second UI_
+
+I chose the text of First UI sketch because it explains what to do/how to play. 
+And I chose the buttons of the second UI sketch because I liked the idea of a dungeon door.  (_Buttons of the first UI look like a standard application_).
+
+<h1> GUI - User Testing </h1>
+
+![2018-04-06-UIOnDevice|690x388](upload://5thX7wY5Rf2LiMkgOGDo3u9Z1IG.png)
+_Fig.5 : UI deployed_
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+  </tr>
+  <tr>
+    <td>Do you see some panels in front of you ?</td>
+    <td>Yes giant panels ! Good explanations.</td>
+  </tr>
+  <tr>
+    <td>What do you think these panels are for ?</td>
+    <td>They are dedicated to start and restart the game. They look floating.</td>
+  </tr>
+  <tr>
+    <td>Do you guess how to start the game ? </td>
+    <td>Yes, I suppose I have to click on the door.</td>
+  </tr>
+</table>
+
+<h2> Movement - User Testing </h2>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+  </tr>
+  <tr>
+    <td>How did you feel about the speed of this first movement (too slow, too fast) ?</td>
+    <td>It was fine. I had time to see the entrance and progressively discover inside.</td>
+  </tr>
+  <tr>
+    <td>Did you feel sick or uncomfortable ?</td>
+    <td>No. But a wahoo sensation. </td>
+  </tr>
+  <tr>
+    <td>Did you notice any sort of height changes or anything disorienting in the movement ? </td>
+    <td>No, but during the exit movement, I went through the left orb.</td>
+  </tr>
+</table>
+
+<h2>Audio and Visual Feedback - User Testing</h2>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+  </tr>
+  <tr>
+    <td>Did you like the audio and visual feedback ?</td>
+    <td>Yes, the night, the starry sky and the ambient sounds are consistent.</td>
+  </tr>
+</table>
+
+<h1>User Testing Results</h1>
+Hereafter the changes I made according to the testing phases :
+
+* Reducing the orb’s size (too big)
+* Changing the orbs spot light colour from violet to blue.
+* The tester helped me to chose the and combine the UI panels (text and icons).
+* Changing the global ambient colour to have a more darker and night mood.
+
+<h1>Breakdown of final project</h1>
+Below, few screenshots of the final project.
+
+![2018-04-12-Final-UIStart|690x388](upload://rbquOn9Nd4okmhBjM2ssN1dCkk1.jpg)
+_Fig.6 : Final Start UI_
+
+![2018-04-12-Final-InsideTorches|690x388](upload://excn5w84PwPgb1EQ2ZMyADERef7.png)
+_Fig.7 : Final Game (with fire particles)_
+
+![2018-04-12-Final-NightSky|690x388](upload://eByp3DwGh5RjDcAcrqrZAICK85F.jpg)
+_Fig.8 : The Starry Sky_
+
+<h1>Next Steps</h1>
+I consider this version of the game as a beta version. The game logic works.
+
+But in terms of scene, I’m not satisfied.
+The final game should present several scenes the user could chose at the beginning of the game. To develop those additional scenes, I need a designer and a sound maker. Each scene has its own mood.
+
+<h1> Conclusion</h1>
+The Puzzler VR game was interesting in terms of iterative design and enjoying in terms of implementation.
+
+As a developer, I would have liked to write a little more code. 
+Fortunately, the use of iTween and the audio source capabilities have been great discoveries.
+
+There is a big difference between the initial idea and the final realization because I did not have enough time and neither the graphic designer skills.
