@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class AppController : MonoBehaviour {
 
-    public GameObject alpsTerrain;
-
-    public GameObject mountainPrefab;
+    public GameObject pinPointPrefab;
 
     private List<GameObject> mountains;
 
@@ -15,11 +13,13 @@ public class AppController : MonoBehaviour {
         this.mountains = new List<GameObject>();
         foreach (MountainData data in MountainData.MOUNTAINS) {
             Debug.Log("Mountain: " + data);
-            GameObject mountain = Instantiate(mountainPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
+            GameObject mountain = Instantiate(pinPointPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
             TextMesh text = mountain.GetComponentInChildren<TextMesh>();
             text.text = data.name + "\n" + data.altitude + "m";
             this.mountains.Add(mountain);
         }
+
+        Application.OpenURL("www.google.com");
 	}
 	
 	// Update is called once per frame
