@@ -57,9 +57,9 @@ public class Waypoint : MonoBehaviour
 		_material					= Instantiate(material);
 		_color_origional			= _material.color;
 		_color						= _color_origional;
-		_audio_source				= gameObject.GetComponent<AudioSource>();	
-		_audio_source.clip		 	= clip_click;
-		_audio_source.playOnAwake 	= false;
+//		_audio_source				= gameObject.GetComponent<AudioSource>();	
+//		_audio_source.clip		 	= clip_click;
+//		_audio_source.playOnAwake 	= false;
 
         subject = Camera.main.transform.parent.gameObject;
         subject.transform.position = Camera.main.transform.parent.transform.position;
@@ -131,7 +131,7 @@ public class Waypoint : MonoBehaviour
 	{
 		_state = _state == State.Focused ? State.Clicked : _state;
 		
-		_audio_source.Play();
+//		_audio_source.Play();
 
         Debug.Log(subject.name + " : " + subject.transform.position + " to " + gameObject.transform.position);
         iTween.MoveTo(subject, 

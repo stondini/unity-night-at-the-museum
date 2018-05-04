@@ -6,6 +6,8 @@ public class AppController : MonoBehaviour {
 
     public GameObject pinPointPrefab;
 
+    public GameObject wayPointsContainer; 
+
     private List<GameObject> mountains;
 
 	// Use this for initialization
@@ -32,4 +34,28 @@ public class AppController : MonoBehaviour {
             mountain.transform.rotation = rotation;
         }
 	}
+
+    public void setAltitudeTo1000m() {
+        for (int index = 0; index < wayPointsContainer.transform.childCount; index++) {
+            GameObject waypoint = wayPointsContainer.transform.GetChild(index).gameObject;
+            Vector3 currentPos = waypoint.transform.position;
+            waypoint.transform.position = new Vector3(currentPos.x, 0.2f, currentPos.z);
+        }
+    }
+
+    public void setAltitudeTo2000m() {
+        for (int index=0; index < wayPointsContainer.transform.childCount; index++) {
+            GameObject waypoint = wayPointsContainer.transform.GetChild(index).gameObject;
+            Vector3 currentPos = waypoint.transform.position;
+            waypoint.transform.position = new Vector3(currentPos.x, 0.4f, currentPos.z);
+        }
+    }
+
+    public void setAltitudeTo3000m() {
+        for (int index = 0; index < wayPointsContainer.transform.childCount; index++) {
+            GameObject waypoint = wayPointsContainer.transform.GetChild(index).gameObject;
+            Vector3 currentPos = waypoint.transform.position;
+            waypoint.transform.position = new Vector3(currentPos.x, 0.6f, currentPos.z);
+        }
+    }
 }
