@@ -1147,38 +1147,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1900725125}
     m_Modifications:
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.797
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.957
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1780237806765746, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -1191,25 +1159,18 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4462664914276336, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.5
+    - target: {fileID: 65634810340574928, guid: 1cb5066707501493b808fc8af8468fb9,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
+      propertyPath: m_LocalPosition.y
+      value: 0.58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
@@ -1409,7 +1370,7 @@ GameObject:
   - component: {fileID: 1107905398}
   - component: {fileID: 1107905397}
   m_Layer: 5
-  m_Name: Altitude
+  m_Name: Waypoints Altitude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1422,7 +1383,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107905395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -199, y: 65.5, z: 0}
+  m_LocalPosition: {x: -91.2, y: 65.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1772842085}
@@ -1430,7 +1391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199, y: 65.5}
+  m_AnchoredPosition: {x: -91.2, y: 65.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107905397
@@ -1465,7 +1426,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Altitude
+  m_Text: Waypoints Altitude
 --- !u!222 &1107905398
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1711,6 +1672,82 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1350529838}
+--- !u!1 &1373971268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1373971269}
+  - component: {fileID: 1373971271}
+  - component: {fileID: 1373971270}
+  m_Layer: 5
+  m_Name: Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1373971269
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1373971268}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.599998, y: 13.099998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1772842085}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 15.6, y: 13.1}
+  m_SizeDelta: {x: 280, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1373971270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1373971268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Click on the green pinpoint to show the description.
+
+    Double click to close.'
+--- !u!222 &1373971271
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1373971268}
 --- !u!1001 &1386463207
 Prefab:
   m_ObjectHideFlags: 0
@@ -2541,7 +2578,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1772842081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 300}
+  m_LocalPosition: {x: 0, y: 0, z: 450}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 740865385}
@@ -2549,6 +2586,7 @@ RectTransform:
   - {fileID: 621140361}
   - {fileID: 787074003}
   - {fileID: 1157084459}
+  - {fileID: 1373971269}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

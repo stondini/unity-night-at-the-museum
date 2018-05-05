@@ -1,15 +1,16 @@
 <h1>Introduction</h1>
 <b>Night at the Museum</b> is a project of Udacity VR Developer nano-degree (term 2).<br/>
-The Players has to solve a pattern based puzzle like Simon (https://en.wikipedia.org/wiki/Simon_(game)).
+The museum visitor can walk to reach the viewing stations and activate the station's related content.<br/>
 This write up presents the project achievement process that starts with Persona description, scene sketches &amp; ideas, sound amp; light environment, user testing and deployment on a device.<br/>
 The entire process was executed iteratively (agile methodology).
 <br/><br/>
 Goals of this write up :
 <lu>
     <li>Museum description, ideas and scenarii to be sure the audience will understand all the concepts (sketches and screenshots of a beta version help to materialise).</li>
-    <li>First tests feedback. They are useful to improve the experience.</li>
+    <li>Tests feedback. They are useful to improve the experience.</li>
     <li>What are the next amazing steps likely to interest the audience.</li>
 </lu>
+
 <h1>Outcome - Checkout the final video</h1>
 
 [https://youtu.be/6pdoxEXERvw](https://youtu.be/6pdoxEXERvw)
@@ -20,34 +21,38 @@ Goals of this write up :
 
 <h2>Persona</h2>
 
-![class|200x200](upload://7gzs6OAcYMoEUGBi8MzWog8BgAD.png)
+<img src="Persona.png" width="200px"/>
 <table>
   <tr>
+    <td>Name:</td>
+    <td>Richard</td>
+  </tr>
+  <tr>
     <td>Age:</td>
-    <td>42</td>
+    <td>62</td>
   </tr>
   <tr>
     <td>Occupation:</td>
-    <td>Banker</td>
+    <td>Retired (he was Engineer and mountain lover)</td>
   </tr>
 <tr>
     <td>Quote:</td>
-     <td>VR could allow me escaping this crazy world.</td>
+     <td>VR could allow me climbing mountains like when I was young :)</td>
   </tr>
 <tr>
     <td>About:</td>
-     <td>Steven loves his job even though it's very stressful.To reduce stress, Steven plays non-violent games. He plays even at his job during its pauses or at lunch time. Steven like short but challenging games. He is married and has two children sometimes Steven is playing with.</td>
+     <td>Richard worked as electronic engineer for a big company.<br/>He traveled a lot during its holidays and during its trips, he climbed on a lot of mountains around the world.<br/>Nowadays, ha can't climb anymore.</td>
   </tr>
 <tr>
     <td>VR Experience Level:</td>
-    <td>No VR experience but a lot of game playing on computer and mobile device.</td>
+    <td>No VR experience.</td>
   </tr>
 </table>
 
 <h1>Sketche and Ideas</h1>
 The idea is to build a museum that gives informations on some famous Swiss Alps mountains.<br/>
 The visitor can move around mountains using a way points navigation system.<br/>
-Each mountain is identified by a <i>pinpoint</i> which is displaying the name and altitude of the mountain.<br/>
+Each mountain is identified by a <i>pinpoint</i> which is displaying the name and altitude of the related mountain.<br/>
 <br/>
 <br/>
 <img src="Sketch.jpeg" width="640px"/>
@@ -56,14 +61,32 @@ The user can visit the must fabulous Swiss Alps Mountains my moving along a path
 <img src="CameraPath.png" width="640px"/>
 
 <h1>Design</h1>
-
-The first is to build the mesh of the Swiss Alps.
-Switzerland government provides a 3D points cloud of the whole country (<a href="https://www.swisstopo.admin.ch">Swiss Topo</a>).
-The points could must be converted as a mesh (<i>I tried few apps like CloudCompare, MeshLab and Blender. I finally used Blender</i>).
-Points outside the Alps area are removed.
-<br/>
-The second step is to map the texture on the mesh.
+<p>
+The first think to do is to build the mesh of the Swiss Alps.<br/>
+Swiss Government provides a 3D points cloud of the whole country (<a href="https://www.swisstopo.admin.ch">Swiss Topo</a>).<br/>
+The points cloud must be converted to a mesh (<i>I tried few apps like CloudCompare, MeshLab and Blender. I finally used Blender</i>).
+The useless points outside the Alps area are removed.
+</p>
+<p>
+The second step is to map the texture on the mesh (<i>This took me a lot of time because it was the first time I used Blender app</i>).
+</p>
 <img src="BlenderMesh.png" width="640px"/>
+<p>
+Next, the mesh and its texture are exported from Blender and imported into Unity.<br/>
+Pinpoints are placed on the top of interesting mountains (<i>I used Google Map to locate the position of the mountains as precisely as possible.</i>).
+</p>
+<p>
+Wayspoints are positionned to allow the visitor reaching all interesting mountains.
+</p>
+<p>
+Last step is to code all the glue :
+<ul>
+    <li>Application controller that initialize the pinpoints and the camera.</li>
+    <li>Waypoints navigation. This could be the same code as <i>A Maze</i> project.</li>
+    <li>UI interactions.</li>
+    <li>UI WebView to display the Wikipedia page of the selected mountains.</li>
+</ul>
+</p>
 
 <h1>Scene</h1>
 Each important mountain is pointed by a <i>pinpoint</i>.
@@ -121,17 +144,19 @@ I asked few questions:
 The tester liked it. Smaller orbs and the blue spot light matches the “light” of the orbs.
 
 <h1>Graphical User Interface</h1>
-<h2>Start UI</h2>
-
-* Title of the museum
-* Waypoints altitude change toggle buttons.
-
+<h2>Main UI</h2>
+<lu>
+    <li>Title of the museum</li>
+    <li>Waypoints altitude change toggle buttons</li>
+</lu>
+<br/>
 <img src="2018-05-05-UI.Altitude.Toggles.png" width="640px" /><br/><br/>
 
-<he>Restart UI</h2>
-
-* Tell the player if he/she has succeeded
-* Give the player to play the game again
+<h2>Mountain information UI</h2>
+<lu>
+    <li>Wikipedia page of the selected mountain</li>
+    <li>Double click/tap to close the web browser</li>
+</lu>
 
 ![GUI-1|690x276](upload://5jVQoWWSs3murUvcGxBFTCAKbHO.jpeg)
 _Fig.3 : First UI_
@@ -219,15 +244,32 @@ _Fig.7 : Final Game (with fire particles)_
 _Fig.8 : The Starry Sky_
 
 <h1>Next Steps</h1>
-I consider this version of the game as a beta version. The game logic works.
-
-But in terms of scene, I’m not satisfied.
-The final game should present several scenes the user could chose at the beginning of the game. To develop those additional scenes, I need a designer and a sound maker. Each scene has its own mood.
-
-<h1> Conclusion</h1>
-The Puzzler VR game was interesting in terms of iterative design and enjoying in terms of implementation.
-
-As a developer, I would have liked to write a little more code. 
-Fortunately, the use of iTween and the audio source capabilities have been great discoveries.
-
-There is a big difference between the initial idea and the final realization because I did not have enough time and neither the graphic designer skills.
+<p>
+I'd like to build a more precise mesh. More points.<br/>
+The purpose is to provide many more mountains with a very high resolution texture. Maybe many textures should be used. One by mesh part.
+</p>
+<p>
+Visitor experience could be improved by letting it navigate freely.<br/>
+Waypoints will be removed and replaced by a navigation system that requires specific hardware like hand controllers.<br/>
+</p>
+<p>
+The WebView is not good. Maybe I should consider a commercial WebView. I could also check if the last Unity version provides a WebView.
+</p>
+<h1>Conclusion</h1>
+<p>
+<b>Night at the Museum</b> VR project was ambishious.<br/>
+It was interesting because I played few other roles than VR Developer.<br/>
+It was also challenging because of the three next points.<br/>
+</p>
+Three points in the project was tough to implement :
+<ol>
+    <li>Using Blender App to create the mesh and map the texture. Blender is not a simple app. I read few tutorials to achieve the mesh and texture mapping.</li>
+    <li>Finding and using a WebView. Unity doesn't provide a builtin WebView so I found one.<br/>The result is not perfect because the view is not fully integrated in to the canvas or the scene.</li>
+    <li>A lack of time to implement a better result. Two weeks is too short,</li>
+</ol>
+<p>
+I'm not fully statified by the result. Navigation is not perfect. I thing the visitor should <i>fly</i> instead of moving by waypoints.
+</p>
+<p>
+Anyway, I enjoyed designing and implementing this project.
+</p>
