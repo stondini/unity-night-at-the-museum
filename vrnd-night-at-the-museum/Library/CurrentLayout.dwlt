@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1636
     height: 956
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
-  controlID: 111
+  controlID: 114
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1330
     height: 956
-  m_MinSize: {x: 404, y: 342}
-  m_MaxSize: {x: 8004, y: 8042}
+  m_MinSize: {x: 406, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 112
+  controlID: 115
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 1330
     height: 660
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 113
+  controlID: 116
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 660
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -257,8 +257,8 @@ MonoBehaviour:
     y: 0
     width: 306
     height: 956
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -370,23 +370,23 @@ MonoBehaviour:
     height: 639
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c670000
-    m_LastClickedID: 26396
-    m_ExpandedIDs: e4d9fbff9adafbff26dcfbff8cfbffff000000002c2a00003a2a0000de2a0000f22a0000dc66000082670000ce6700003a680000e8680000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: a203fcff5804fcfff005fcff3446feff264cfeffdc4cfeff684efefff856feffae57feff3c59feff3647ffff5c87ffffa6fbffff000000005a2a0000122b000058640000a4640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Waypoint (16)
-      m_OriginalName: Waypoint (16)
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26912
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -422,14 +422,14 @@ MonoBehaviour:
     width: 1122
     height: 639
   m_SceneLighting: 0
-  lastFramingTime: 55614.0403649807
+  lastFramingTime: 1661.2498149871826
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.8302709, y: 2.0458798, z: -4.666415}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: -0.8302709, y: 2.0458798, z: -4.666415}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 2
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -452,13 +452,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.25690335, y: 0.0072525204, z: -0.0019608208, w: 0.96646225}
+    m_Target: {x: 0.031803913, y: 0.012005548, z: -0.00041691976, w: 0.99947506}
     speed: 2
-    m_Value: {x: 0.25688985, y: 0.007252139, z: -0.0019607176, w: 0.9664115}
+    m_Value: {x: 0.031802226, y: 0.012004911, z: -0.00041689764, w: 0.9994221}
   m_Size:
-    m_Target: 3.7428942
+    m_Target: 22
     speed: 2
-    m_Value: 3.7428942
+    m_Value: 22
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -586,23 +586,23 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 2}
-    m_SelectedIDs: 28280000
-    m_LastClickedID: 10280
-    m_ExpandedIDs: 000000001a2800002828000094280000f6280000e02b0000e22b0000e42b0000e62b000000ca9a3bffffff7f
+    m_SelectedIDs: 3e280000
+    m_LastClickedID: 10302
+    m_ExpandedIDs: 00000000302800003e280000a22800000c29000046290000182c00001a2c00001c2c00001e2c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Prefabs
-      m_OriginalName: Prefabs
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10280
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -616,7 +616,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a2800002828000094280000f6280000e02b0000e22b0000e42b0000e62b0000
+    m_ExpandedIDs: 00000000302800003e2800006c280000a22800000c29000046290000182c00001a2c00001c2c00001e2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -641,8 +641,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5e30fdff
-    m_LastClickedInstanceID: -184226
+    m_SelectedInstanceIDs: e6280000
+    m_LastClickedInstanceID: 10470
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000d02b00009c3000001ea6fcff5a44faffe23100004e2a0000bc270000ba2a00002237faffd227000032290000522f0000d02d000000000000ce73ffff
     m_RenameOverlay:
@@ -660,7 +660,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -898,9 +898,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1361
+    x: 1376
     y: 93
-    width: 319
+    width: 304
     height: 935
 --- !u!114 &23
 MonoBehaviour:
@@ -923,9 +923,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1320
+    x: 1376
     y: 93
-    width: 360
+    width: 304
     height: 935
   m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
   m_GlobalObjectTypeName: 

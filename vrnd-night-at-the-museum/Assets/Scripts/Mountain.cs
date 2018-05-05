@@ -6,6 +6,8 @@ public class Mountain : MonoBehaviour {
 
     public GameObject mountainPrefab;
 
+    public MountainData mountainData;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -14,4 +16,8 @@ public class Mountain : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void Click() {
+        WebView.Show(mountainData.docURL);
+    }
 }
