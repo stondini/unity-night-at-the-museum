@@ -14,3 +14,5 @@ This project is part of [Udacity](https://www.udacity.com "Udacity - Be in deman
 ## Credit / Special Thanks
 - Swiss Topo for the free Swiss 3D Map (https://www.swisstopo.admin.ch/en/home.html)
 - iTween 2.0.9 (http://itween.pixelplacement.com)
+- Sound effects (http://soundbible.com)
+- Unity WebView (https://github.com/gree/unity-webview)

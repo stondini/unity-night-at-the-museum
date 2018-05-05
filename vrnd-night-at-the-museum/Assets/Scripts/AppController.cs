@@ -12,6 +12,9 @@ public class AppController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //Camera.main.transform.parent.transform.position = new Vector3(4.75f, 0.4f, -4);
+        Camera.main.transform.parent.transform.position = new Vector3(0f, 0.4f, -4);
+
         this.mountains = new List<GameObject>();
         foreach (MountainData data in MountainData.MOUNTAINS) {
             Debug.Log("Mountain: " + data);
@@ -20,8 +23,6 @@ public class AppController : MonoBehaviour {
             text.text = data.name + "\n" + data.altitude + "m";
             this.mountains.Add(mountain);
         }
-
-        Application.OpenURL("www.google.com");
 	}
 	
 	// Update is called once per frame
@@ -35,27 +36,25 @@ public class AppController : MonoBehaviour {
         }
 	}
 
-    public void setAltitudeTo1000m() {
-        for (int index = 0; index < wayPointsContainer.transform.childCount; index++) {
+    private void setAltitudeTo(float altitudeY)
+    {
+        for (int index = 0; index < wayPointsContainer.transform.childCount; index++)
+        {
             GameObject waypoint = wayPointsContainer.transform.GetChild(index).gameObject;
             Vector3 currentPos = waypoint.transform.position;
-            waypoint.transform.position = new Vector3(currentPos.x, 0.2f, currentPos.z);
+            waypoint.transform.position = new Vector3(currentPos.x, altitudeY, currentPos.z);
         }
+    }
+
+    public void setAltitudeTo1000m() {
+        setAltitudeTo(0.3f);
     }
 
     public void setAltitudeTo2000m() {
-        for (int index=0; index < wayPointsContainer.transform.childCount; index++) {
-            GameObject waypoint = wayPointsContainer.transform.GetChild(index).gameObject;
-            Vector3 currentPos = waypoint.transform.position;
-            waypoint.transform.position = new Vector3(currentPos.x, 0.4f, currentPos.z);
-        }
+        setAltitudeTo(0.4f);
     }
 
     public void setAltitudeTo3000m() {
-        for (int index = 0; index < wayPointsContainer.transform.childCount; index++) {
-            GameObject waypoint = wayPointsContainer.transform.GetChild(index).gameObject;
-            Vector3 currentPos = waypoint.transform.position;
-            waypoint.transform.position = new Vector3(currentPos.x, 0.6f, currentPos.z);
-        }
+        setAltitudeTo(0.6f);
     }
 }

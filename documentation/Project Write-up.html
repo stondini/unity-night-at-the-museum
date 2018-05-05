@@ -1,13 +1,15 @@
 <h1>Introduction</h1>
-Puzzler is a project of Udacity VR Developer nano-degree (term 2).
+<b>Night at the Museum</b> is a project of Udacity VR Developer nano-degree (term 2).<br/>
 The Players has to solve a pattern based puzzle like Simon (https://en.wikipedia.org/wiki/Simon_(game)).
-This write up presents the project achievement process that starts with Persona description, scene sketches & ideas, sound & light environment, user testing and deployment on a device. This entire process was executed iteratively (agile methodology).
-
+This write up presents the project achievement process that starts with Persona description, scene sketches &amp; ideas, sound amp; light environment, user testing and deployment on a device.<br/>
+The entire process was executed iteratively (agile methodology).
+<br/><br/>
 Goals of this write up :
-* Game description, ideas and scenarii to be sure the audience will understand all the concepts (sketches and screenshots of a beta version help to materialise).
-* First tests feedback. They are useful to improve the game iteratively.
-* What are the next amazing steps likely to interest the audience.
-
+<lu>
+    <li>Museum description, ideas and scenarii to be sure the audience will understand all the concepts (sketches and screenshots of a beta version help to materialise).</li>
+    <li>First tests feedback. They are useful to improve the experience.</li>
+    <li>What are the next amazing steps likely to interest the audience.</li>
+</lu>
 <h1>Outcome - Checkout the final video</h1>
 
 [https://youtu.be/6pdoxEXERvw](https://youtu.be/6pdoxEXERvw)
@@ -34,9 +36,7 @@ Goals of this write up :
   </tr>
 <tr>
     <td>About:</td>
-     <td>
-
-Steven loves his job even though it's very stressful.To reduce stress, Steven plays non-violent games. He plays even at his job during its pauses or at lunch time. Steven like short but challenging games. He is married and has two children sometimes Steven is playing with.</td>
+     <td>Steven loves his job even though it's very stressful.To reduce stress, Steven plays non-violent games. He plays even at his job during its pauses or at lunch time. Steven like short but challenging games. He is married and has two children sometimes Steven is playing with.</td>
   </tr>
 <tr>
     <td>VR Experience Level:</td>
@@ -44,11 +44,26 @@ Steven loves his job even though it's very stressful.To reduce stress, Steven pl
   </tr>
 </table>
 
-<h1>Sketches</h1>
-
+<h1>Sketche and Ideas</h1>
+The idea is to build a museum that gives informations on some famous Swiss Alps mountains.<br/>
+The visitor can move around mountains using a way points navigation system.<br/>
+Each mountain is identified by a <i>pinpoint</i> which is displaying the name and altitude of the mountain.<br/>
+<br/>
+<br/>
+<img src="Sketch.jpeg" width="640px"/>
 <h2>Swiss Alps</h2>
 The user can visit the must fabulous Swiss Alps Mountains my moving along a path (red line below).<br/><br/>
 <img src="CameraPath.png" width="640px"/>
+
+<h1>Design</h1>
+
+The first is to build the mesh of the Swiss Alps.
+Switzerland government provides a 3D points cloud of the whole country (<a href="https://www.swisstopo.admin.ch">Swiss Topo</a>).
+The points could must be converted as a mesh (<i>I tried few apps like CloudCompare, MeshLab and Blender. I finally used Blender</i>).
+Points outside the Alps area are removed.
+<br/>
+The second step is to map the texture on the mesh.
+<img src="BlenderMesh.png" width="640px"/>
 
 <h1>Scene</h1>
 Each important mountain is pointed by a <i>pinpoint</i>.
@@ -58,17 +73,20 @@ Each important mountain is pointed by a <i>pinpoint</i>.
     <li>The <i>pinpoints</i> must be always visible to the user. It means, the <i>pinpoints</i> must <i>look at</i> or <i>facing </i>the user/camera at any time.</li>
     <li>The cloudy skybox improve the scene's reality.</li>
     <li>The sound of a windy weather improve the scene's reality</li>
+    <li>The UI canvas contains few toggle buttons to allow way point altitude change.</li>
 </lu>
 
 <h2>Testing the Scene</h2>
 
 The first test is related to the <i>pinpoint</i> that shows a mountain place.<br/>
 The goal of this test is to gather information about the visibility and the understanding of the concept of <i>pinpoint</i>.
-<img src="2018-04-30-Pin.Draft.png" width="640px"/><br/><br/>
+<img src="2018-04-30-Pin.Draft.png" width="640px" /><br/><br/>
  
-The first impression if the tester was <cite>Ouhahou ! It's amazing !</cite><br/>
+The first impression if the tester was <i>Ouhahou ! It's amazing !</i><br/>
 
 The user said "the border of the map" :(
+The pinpoints are too big. They mask some mountains.
+
 
 I asked few questions:
 <table>
@@ -98,20 +116,17 @@ I asked few questions:
   </tr>
 </table>
 
-![2018-04-04-LightTestedOnDevice-1|690x388](upload://hR58AMwiAzylV2yOH3UaM63JlR6.png)
-_Fig.1 : First light environment_
-
-![2018-04-04-LightTestedOnDevice-2|690x388](upload://uFEPkimxtFBw9Lki4tUQxIdD8kc.jpg)
-_Fig.2 : Second light environment_
+<img src="2018-05-05-WayPoints.png" width="640px" /><br/><br/>
 
 The tester liked it. Smaller orbs and the blue spot light matches the “light” of the orbs.
 
 <h1>Graphical User Interface</h1>
 <h2>Start UI</h2>
 
-* Introduce the player experience
-* Tell the player what to expect
-* Begin the puzzle
+* Title of the museum
+* Waypoints altitude change toggle buttons.
+
+<img src="2018-05-05-UI.Altitude.Toggles.png" width="640px" /><br/><br/>
 
 <he>Restart UI</h2>
 
