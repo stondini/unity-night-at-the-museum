@@ -1,7 +1,7 @@
 <h1>Introduction</h1>
 <b>Night at the Museum</b> is a project of Udacity VR Developer nano-degree (term 2).<br/>
 The museum visitor can walk to reach the viewing stations and activate the station's related content.<br/>
-This write up presents the project achievement process that starts with Persona description, scene sketches &amp; ideas, sound amp; light environment, user testing and deployment on a device.<br/>
+This write up presents the project achievement process that starts with Persona description, scene sketches &amp; ideas, sound &amp; light environment, user testing and deployment on a device.<br/>
 The entire process was executed iteratively (agile methodology).
 <br/><br/>
 Goals of this write up :
@@ -100,16 +100,15 @@ Each important mountain is pointed by a <i>pinpoint</i>.
 </lu>
 
 <h2>Testing the Scene</h2>
-
+<p>
 The first test is related to the <i>pinpoint</i> that shows a mountain place.<br/>
 The goal of this test is to gather information about the visibility and the understanding of the concept of <i>pinpoint</i>.
+</p>
 <img src="2018-04-30-Pin.Draft.png" width="640px" /><br/><br/>
- 
+<p>
 The first impression if the tester was <i>Ouhahou ! It's amazing !</i><br/>
-
-The user said "the border of the map" :(
-The pinpoints are too big. They mask some mountains.
-
+The pinpoints are too big comparing to the map and the mountains. They mask some mountains.<br/>
+</p>
 
 I asked few questions:
 <table>
@@ -139,9 +138,11 @@ I asked few questions:
   </tr>
 </table>
 
-<img src="2018-05-05-WayPoints.png" width="640px" /><br/><br/>
-
-The tester liked it. Smaller orbs and the blue spot light matches the “light” of the orbs.
+<img src="2018-05-02-WayPoints.png" width="640px" /><br/><br/>
+<p>
+The tester liked it. He had a flying bird impression (<i>this remarks gave me the idea to add a flying bird song</i>).<br/>
+The tester said he has the impression of "falling down" when he navigates near the borders of the map.<br/>
+</p>
 
 <h1>Graphical User Interface</h1>
 <h2>Main UI</h2>
@@ -150,44 +151,29 @@ The tester liked it. Smaller orbs and the blue spot light matches the “light�
     <li>Waypoints altitude change toggle buttons</li>
 </lu>
 <br/>
-<img src="2018-05-05-UI.Altitude.Toggles.png" width="640px" /><br/><br/>
+<img src="2018-05-03-UI.Altitude.Toggles.png" width="640px" /><br/><br/>
 
 <h2>Mountain information UI</h2>
 <lu>
     <li>Wikipedia page of the selected mountain</li>
     <li>Double click/tap to close the web browser</li>
 </lu>
-
-![GUI-1|690x276](upload://5jVQoWWSs3murUvcGxBFTCAKbHO.jpeg)
-_Fig.3 : First UI_
-
-![GUI-2|690x303](upload://1WXoxcTwUPER6Clu4J08K9gSxaU.jpeg)
-_Fig.4 : Second UI_
-
-I chose the text of First UI sketch because it explains what to do/how to play. 
-And I chose the buttons of the second UI sketch because I liked the idea of a dungeon door.  (_Buttons of the first UI look like a standard application_).
+<br/>
+<img src="2018-05-04-UI.Mountain.Info.png" width="640px" /><br/><br/>
 
 <h1> GUI - User Testing </h1>
-
-![2018-04-06-UIOnDevice|690x388](upload://5thX7wY5Rf2LiMkgOGDo3u9Z1IG.png)
-_Fig.5 : UI deployed_
-
 <table>
   <tr>
     <th>Question</th>
     <th>Answer</th>
   </tr>
   <tr>
-    <td>Do you see some panels in front of you ?</td>
-    <td>Yes giant panels ! Good explanations.</td>
+    <td>Do you see a panel in front of you ?</td>
+    <td>Yes, I understand I'm at the museum.</td>
   </tr>
   <tr>
-    <td>What do you think these panels are for ?</td>
-    <td>They are dedicated to start and restart the game. They look floating.</td>
-  </tr>
-  <tr>
-    <td>Do you guess how to start the game ? </td>
-    <td>Yes, I suppose I have to click on the door.</td>
+    <td>What do you think the panel is for ?</td>
+    <td>It presents three buttons. I can change the altitude of the waypoints.</td>
   </tr>
 </table>
 
@@ -198,16 +184,16 @@ _Fig.5 : UI deployed_
     <th>Answer</th>
   </tr>
   <tr>
-    <td>How did you feel about the speed of this first movement (too slow, too fast) ?</td>
-    <td>It was fine. I had time to see the entrance and progressively discover inside.</td>
+    <td>How did you feel about the speed of the movementy (too slow, too fast) ?</td>
+    <td>Some are slow, some are fast (<i>I explained the travel time is the same between two waypoints</i>).</td>
   </tr>
   <tr>
     <td>Did you feel sick or uncomfortable ?</td>
-    <td>No. But a wahoo sensation. </td>
+    <td>No. Except near the boarders of the scene.</td>
   </tr>
   <tr>
     <td>Did you notice any sort of height changes or anything disorienting in the movement ? </td>
-    <td>No, but during the exit movement, I went through the left orb.</td>
+    <td>No, but in some cases, I flew through the waypoint (<i>This is due to the waypoint redisplay when the reticle is out of the collider</i>).</td>
   </tr>
 </table>
 
@@ -219,38 +205,36 @@ _Fig.5 : UI deployed_
   </tr>
   <tr>
     <td>Did you like the audio and visual feedback ?</td>
-    <td>Yes, the night, the starry sky and the ambient sounds are consistent.</td>
+    <td>Yes, the wind sound and the flying bird sound are nice. But one more time, I didn't like the borders of the map.</td>
   </tr>
 </table>
 
 <h1>User Testing Results</h1>
 Hereafter the changes I made according to the testing phases :
-
-* Reducing the orb’s size (too big)
-* Changing the orbs spot light colour from violet to blue.
-* The tester helped me to chose the and combine the UI panels (text and icons).
-* Changing the global ambient colour to have a more darker and night mood.
+<ul>
+<li>Reducing the size of the pinpoints.</li>
+<li>Increasing the time of travel between waypoints.</li>
+<li>Adding the flying bird sound.</li>
+<li>NOT YET IMPLEMENTED (see Next Steps) : Changing the skybox to define more smooth borders.</li>
+</ul>
 
 <h1>Breakdown of final project</h1>
 Below, few screenshots of the final project.
 
-![2018-04-12-Final-UIStart|690x388](upload://rbquOn9Nd4okmhBjM2ssN1dCkk1.jpg)
-_Fig.6 : Final Start UI_
-
-![2018-04-12-Final-InsideTorches|690x388](upload://excn5w84PwPgb1EQ2ZMyADERef7.png)
-_Fig.7 : Final Game (with fire particles)_
-
-![2018-04-12-Final-NightSky|690x388](upload://eByp3DwGh5RjDcAcrqrZAICK85F.jpg)
-_Fig.8 : The Starry Sky_
+<img src="2018-05-05-Breakdown-1.png" width="640px" /><br/><br/>
+<img src="2018-05-05-Breakdown-2.png" width="640px" /><br/><br/>
+<img src="2018-05-05-Breakdown-3.png" width="640px" /><br/><br/>
+<img src="2018-05-05-Breakdown-4.png" width="640px" /><br/><br/>
 
 <h1>Next Steps</h1>
 <p>
-I'd like to build a more precise mesh. More points.<br/>
+I'd like to build a more precise mesh using more points.<br/>
 The purpose is to provide many more mountains with a very high resolution texture. Maybe many textures should be used. One by mesh part.
 </p>
 <p>
 Visitor experience could be improved by letting it navigate freely.<br/>
 Waypoints will be removed and replaced by a navigation system that requires specific hardware like hand controllers.<br/>
+The skybox should be reviewed to avoid the sharp borders. This will avoid the visitor remark <i>Ha ! I'm going to fall....</i>
 </p>
 <p>
 The WebView is not good. Maybe I should consider a commercial WebView. I could also check if the last Unity version provides a WebView.
