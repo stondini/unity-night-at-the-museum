@@ -6,26 +6,11 @@ public class PinPoint : MonoBehaviour {
 
     public GameObject icon;
 
-    public Data data;
+    private Data data;
 
 	// Use this for initialization
 	void Start () {
-		Renderer iconRenderer = icon.GetComponent<Renderer>();      
-		Debug.Log(data.name);
-		if (data.type == Data.MOUNTAIN)
-        {
-			Debug.Log(Resources.Load("Materials/MountainIcon", typeof(Material)).name);
-			iconRenderer.material = Resources.Load("Materials/MountainIcon", typeof(Material)) as Material;
-        }
-        else if (data.type == Data.CITY)
-        {
-			Debug.Log(Resources.Load("Materials/CityIcon", typeof(Material)).name);
-			iconRenderer.material = Resources.Load("Materials/CityIcon", typeof(Material)) as Material;
-        }
-        else if (data.type == Data.ATTRACTION)
-        {
 
-        }
 	}
 	
 	// Update is called once per frame
@@ -33,14 +18,42 @@ public class PinPoint : MonoBehaviour {
 		
 	}
 
+	public Data GetData() {
+		return data;
+	}
+
+	public void SetData(Data data) {
+		this.data = data;
+		Renderer iconRenderer = icon.GetComponent<Renderer>();
+        if (data.type == Data.MOUNTAIN)
+        {
+            iconRenderer.material = Resources.Load("Materials/MountainIcon", typeof(Material)) as Material;
+        }
+        else if (data.type == Data.CITY)
+        {
+            iconRenderer.material = Resources.Load("Materials/CityIcon", typeof(Material)) as Material;
+        }
+        else if (data.type == Data.ATTRACTION)
+        {
+            iconRenderer.material = Resources.Load("Materials/AttractionIcon", typeof(Material)) as Material;
+        }
+        else if (data.type == Data.PICTURE)
+        {
+            iconRenderer.material = Resources.Load("Materials/PictureIcon", typeof(Material)) as Material;
+        }
+	}
+
     public void Click() {
 		if (data.type == Data.MOUNTAIN)
 		{
-			WebView.Show(data.docURL);
+			MediaManager.Show(data.docURL);
 		} else if (data.type == Data.CITY) {
 			
 		} else if (data.type == Data.ATTRACTION) {
 			
-		}
+		} else if (data.type == Data.PICTURE)
+        {
+
+        }
     }
 }

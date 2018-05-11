@@ -11,3 +11,4 @@ This project is part of [Udacity](https://www.udacity.com "Udacity - Be in deman
 - iTween 2.0.9 (http://itween.pixelplacement.com)
 - Sound effects (http://soundbible.com)
 - Unity WebView (https://github.com/gree/unity-webview)
+- 3Dfrk Picture Frames  (https://connect.unity.com/u/5a246700880c64001e4fa63e)

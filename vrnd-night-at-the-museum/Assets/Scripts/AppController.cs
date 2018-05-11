@@ -21,7 +21,7 @@ public class AppController : MonoBehaviour {
         foreach (Data data in Data.MOUNTAINS) {
             GameObject pinPoint = Instantiate(pinPointPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
 			PinPoint script = pinPoint.GetComponent<PinPoint>();
-            script.data = data;
+			script.SetData(data);
 			TextMesh text = pinPoint.GetComponentInChildren<TextMesh>();
 			text.text = data.name + "\n" + data.shortInfo;
 			this.pinPoints.Add(pinPoint);
@@ -30,19 +30,19 @@ public class AppController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        foreach (GameObject mountain in this.pinPoints) {
+        foreach (GameObject pinPoint in this.pinPoints) {
             Vector3 forward = Camera.main.transform.forward;
             forward.y = 0f;
             Quaternion rotation = Quaternion.LookRotation(forward);
-            mountain.transform.rotation = rotation;
-            // Disable mountain if the web view is displayed
-            mountain.SetActive(!WebView.IsDisplayed());
+			pinPoint.transform.rotation = rotation;
+            // Disable pinPoint if the web view is displayed
+			pinPoint.SetActive(!MediaManager.IsDisplayed());
         }
         // Disable waypoint if the web view is displayed
         for (int index = 0; index < wayPointsContainer.transform.childCount; index++)
         {
-            GameObject waypoint = wayPointsContainer.transform.GetChild(index).gameObject;
-            waypoint.SetActive(!WebView.IsDisplayed());
+            GameObject wayPoint = wayPointsContainer.transform.GetChild(index).gameObject;
+			wayPoint.SetActive(!MediaManager.IsDisplayed());
         }
 	}
 
@@ -50,9 +50,9 @@ public class AppController : MonoBehaviour {
     {
         for (int index = 0; index < wayPointsContainer.transform.childCount; index++)
         {
-            GameObject waypoint = wayPointsContainer.transform.GetChild(index).gameObject;
-            Vector3 currentPos = waypoint.transform.position;
-            waypoint.transform.position = new Vector3(currentPos.x, altitudeY, currentPos.z);
+			GameObject wayPoint = wayPointsContainer.transform.GetChild(index).gameObject;
+			Vector3 currentPos = wayPoint.transform.position;
+			wayPoint.transform.position = new Vector3(currentPos.x, altitudeY, currentPos.z);
         }
     }
 

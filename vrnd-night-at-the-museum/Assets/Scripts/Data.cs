@@ -9,6 +9,8 @@ public class Data {
 
 	public static readonly int ATTRACTION = 3;
 
+	public static readonly int PICTURE = 4;
+
 	private static readonly Data MATTERHORN = new Data(MOUNTAIN, -1.5f, 0.8f, 2.5f, "Matterhorn", "4478m", "https://en.wikipedia.org/wiki/Matterhorn");
 
 	private static readonly Data EIGER = new Data(MOUNTAIN, -4.157f, 0.8f, -4.24f, "Eiger", "3967m", "https://en.wikipedia.org/wiki/Eiger");

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 342}
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
-  controlID: 53
+  controlID: 54
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 342}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 54
+  controlID: 55
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 55
+  controlID: 56
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,8 +229,8 @@ MonoBehaviour:
     y: 589
     width: 1330
     height: 367
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
@@ -322,7 +322,7 @@ MonoBehaviour:
       y: 17
       width: 957
       height: 551
-    m_Scale: {x: 2, y: 2}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 478.5, y: 275.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -330,10 +330,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -239.25
-      y: -137.75
-      width: 478.5
-      height: 275.5
+      x: -478.5
+      y: -275.5
+      width: 957
+      height: 551
     m_MinimalGUI: 1
   m_defaultScale: 2
   m_TargetTexture: {fileID: 0}
@@ -370,9 +370,9 @@ MonoBehaviour:
     height: 568
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 44280000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: a6fbffff00000000
+    m_ExpandedIDs: b4f4ffff82f5ffff04f7ffffa6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -427,9 +427,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.957, y: 0.324, z: -0.273}
+    m_Target: {x: 1.2670908, y: 0.3540808, z: 0.7856536}
     speed: 2
-    m_Value: {x: 0.957, y: 0.324, z: -0.273}
+    m_Value: {x: 1.2670908, y: 0.3540808, z: 0.7856536}
   m_RenderMode: 2
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -452,13 +452,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.35436973, y: 0.50797534, z: -0.24091066, w: 0.7472995}
+    m_Target: {x: 0.092257425, y: 0.1399466, z: -0.013080564, w: 0.9858215}
     speed: 2
-    m_Value: {x: 0.3543697, y: 0.50797534, z: -0.24091066, w: 0.74729943}
+    m_Value: {x: -0.092257425, y: -0.1399466, z: 0.013080564, w: -0.9858215}
   m_Size:
-    m_Target: 4.016565
+    m_Target: 5.816566
     speed: 2
-    m_Value: 4.016565
+    m_Value: 5.816566
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -576,19 +576,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Resources/Materials
+    - Assets/Plugins
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Materials
+  - Assets/Plugins/3Dfrk
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/sto/Documents/Cours/Udacity/VR Developer/Projects/unity-night-at-the-museum/vrnd-night-at-the-museum
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5e280000
-    m_LastClickedID: 10334
-    m_ExpandedIDs: 000000003228000040280000a4280000142900004e290000402c0000422c0000442c0000462c0000be49000000ca9a3bffffff7f
+    m_SelectedIDs: 62280000
+    m_LastClickedID: 10338
+    m_ExpandedIDs: 000000002828000036280000622800008c280000962800003a2900003e290000262c0000282c00002a2c00002c2c00002e2c0000302c0000322c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -616,7 +616,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003228000040280000a4280000142900004e290000402c0000422c0000442c0000462c0000
+    m_ExpandedIDs: 000000002828000036280000622800008c280000962800003a2900003e290000262c0000282c00002a2c00002c2c00002e2c0000302c0000322c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -641,9 +641,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 44280000
-    m_LastClickedInstanceID: 10308
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000d02b00009c3000001ea6fcff5a44faffe23100004e2a0000bc270000ba2a00002237faffd227000032290000522f0000d02d000000000000ce73ffff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
