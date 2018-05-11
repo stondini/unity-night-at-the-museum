@@ -6,11 +6,6 @@ This project is part of [Udacity](https://www.udacity.com "Udacity - Be in deman
 - Unity 2017.2.0f3
 - GVR Unity SDK v1.70.0
 
-## Notes
-- 
-- 
-- 
-
 ## Credit / Special Thanks
 - Swiss Topo for the free Swiss 3D Map (https://www.swisstopo.admin.ch/en/home.html)
 - iTween 2.0.9 (http://itween.pixelplacement.com)

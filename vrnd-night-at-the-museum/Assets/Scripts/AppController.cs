@@ -8,7 +8,7 @@ public class AppController : MonoBehaviour {
 
     public GameObject wayPointsContainer; 
 
-    private List<GameObject> mountainPinPoints;
+    private List<GameObject> pinPoints;
 
     private int clicks = 0;
 
@@ -17,20 +17,20 @@ public class AppController : MonoBehaviour {
         //Camera.main.transform.parent.transform.position = new Vector3(4.75f, 0.4f, -4);
         Camera.main.transform.parent.transform.position = new Vector3(0f, 0.4f, -4);
 
-        this.mountainPinPoints = new List<GameObject>();
-        foreach (MountainData data in MountainData.MOUNTAINS) {
-            GameObject mountain = Instantiate(pinPointPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
-            Mountain script = mountain.GetComponent<Mountain>();
-            script.mountainData = data;
-            TextMesh text = mountain.GetComponentInChildren<TextMesh>();
-            text.text = data.name + "\n" + data.altitude + "m";
-            this.mountainPinPoints.Add(mountain);
+        this.pinPoints = new List<GameObject>();
+        foreach (Data data in Data.MOUNTAINS) {
+            GameObject pinPoint = Instantiate(pinPointPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
+			PinPoint script = pinPoint.GetComponent<PinPoint>();
+            script.data = data;
+			TextMesh text = pinPoint.GetComponentInChildren<TextMesh>();
+			text.text = data.name + "\n" + data.shortInfo;
+			this.pinPoints.Add(pinPoint);
         }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        foreach (GameObject mountain in this.mountainPinPoints) {
+        foreach (GameObject mountain in this.pinPoints) {
             Vector3 forward = Camera.main.transform.forward;
             forward.y = 0f;
             Quaternion rotation = Quaternion.LookRotation(forward);

@@ -270,4 +270,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d9581a394ff493c8ad7fba389df29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mountainPrefab: {fileID: 1780237806765746}
+  icon: {fileID: 1214672047131366}
