@@ -8,9 +8,13 @@ public class AppController : MonoBehaviour {
 
     public GameObject wayPointsContainer; 
 
+	public GameObject videoStationPrefab;
+
+	public GameObject pictureStationPrefab;
+
     private List<GameObject> pinPoints;
 
-    private int clicks = 0;
+	private MediaManager mediaManager;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +30,8 @@ public class AppController : MonoBehaviour {
 			text.text = data.name + "\n" + data.shortInfo;
 			this.pinPoints.Add(pinPoint);
         }
+
+		mediaManager = this.GetComponent<MediaManager>();
 	}
 	
 	// Update is called once per frame
@@ -36,13 +42,13 @@ public class AppController : MonoBehaviour {
             Quaternion rotation = Quaternion.LookRotation(forward);
 			pinPoint.transform.rotation = rotation;
             // Disable pinPoint if the web view is displayed
-			pinPoint.SetActive(!MediaManager.IsDisplayed());
+			pinPoint.SetActive(!mediaManager.IsDisplayed());
         }
         // Disable waypoint if the web view is displayed
         for (int index = 0; index < wayPointsContainer.transform.childCount; index++)
         {
             GameObject wayPoint = wayPointsContainer.transform.GetChild(index).gameObject;
-			wayPoint.SetActive(!MediaManager.IsDisplayed());
+			wayPoint.SetActive(!mediaManager.IsDisplayed());
         }
 	}
 
@@ -66,5 +72,27 @@ public class AppController : MonoBehaviour {
 
     public void setAltitudeTo3000m() {
         setAltitudeTo(0.6f);
+    }
+
+	public void PinPointClick()
+    {
+		/*
+        if (data.type == Data.TYPE_MOUNTAIN)
+        {
+            MediaManager.Show(data.docURL);
+        }
+        else if (data.type == Data.TYPE_CITY)
+        {
+
+        }
+        else if (data.type == Data.TYPE_ATTRACTION)
+        {
+
+        }
+        else if (data.type == Data.TYPE_PICTURE)
+        {
+
+        }
+        */
     }
 }

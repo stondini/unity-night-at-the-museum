@@ -6,7 +6,7 @@ public class PinPoint : MonoBehaviour {
 
     public GameObject icon;
 
-    private Data data;
+	private Data data;
 
 	// Use this for initialization
 	void Start () {
@@ -25,35 +25,37 @@ public class PinPoint : MonoBehaviour {
 	public void SetData(Data data) {
 		this.data = data;
 		Renderer iconRenderer = icon.GetComponent<Renderer>();
-        if (data.type == Data.MOUNTAIN)
+        if (data.type == Data.TYPE_MOUNTAIN)
         {
             iconRenderer.material = Resources.Load("Materials/MountainIcon", typeof(Material)) as Material;
         }
-        else if (data.type == Data.CITY)
+		else if (data.type == Data.TYPE_CITY)
         {
             iconRenderer.material = Resources.Load("Materials/CityIcon", typeof(Material)) as Material;
         }
-        else if (data.type == Data.ATTRACTION)
+		else if (data.type == Data.TYPE_ATTRACTION)
         {
             iconRenderer.material = Resources.Load("Materials/AttractionIcon", typeof(Material)) as Material;
         }
-        else if (data.type == Data.PICTURE)
+		else if (data.type == Data.TYPE_PICTURE)
         {
             iconRenderer.material = Resources.Load("Materials/PictureIcon", typeof(Material)) as Material;
         }
 	}
 
     public void Click() {
-		if (data.type == Data.MOUNTAIN)
+		/*
+		if (data.type == Data.TYPE_MOUNTAIN)
 		{
-			MediaManager.Show(data.docURL);
-		} else if (data.type == Data.CITY) {
+			MediaManager.Show(data, Vector3.zero);
+		} else if (data.type == Data.TYPE_CITY) {
 			
-		} else if (data.type == Data.ATTRACTION) {
+		} else if (data.type == Data.TYPE_ATTRACTION) {
 			
-		} else if (data.type == Data.PICTURE)
+		} else if (data.type == Data.TYPE_PICTURE)
         {
 
         }
+        */
     }
 }

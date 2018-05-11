@@ -18,17 +18,19 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class MediaManager : MonoBehaviour
 {
-    static string Url;
-    public static WebViewObject webViewObject;
+    private WebViewObject webViewObject;
+
+	public GameObject videoStationPrefab;
 
     IEnumerator Start()
     {
-        Url = "_blank";
+        string Url = "_blank";
         webViewObject = (new GameObject("WebViewObject")).AddComponent<WebViewObject>();
         webViewObject.Init(
             cb: (msg) =>
@@ -153,19 +155,34 @@ public class MediaManager : MonoBehaviour
     }
 #endif
 
-    public static void Hide()
+    public void Hide()
     {
         webViewObject.SetVisibility(false);
     }
 
-    public static void Show(string url)
+	public void Show(Data data, Vector3 position)
     {
-        Url = url;
-        webViewObject.LoadURL(Url.Replace(" ", "%20"));
-        webViewObject.SetVisibility(true);
+		if (data.mediaType == Data.MEDIA_TYPE_WEBPAGE)
+        {
+			webViewObject.LoadURL(data.docURL.Replace(" ", "%20"));
+            webViewObject.SetVisibility(true);         
+        }
+		else if (data.mediaType == Data.MEDIA_TYPE_VIDEO)
+        {
+			GameObject videoStation = Instantiate(videoStationPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
+        }
+		else if (data.mediaType == Data.MEDIA_TYPE_PICTURE)
+        {
+
+        }
     }
 
-    public static bool IsDisplayed() {
+	private static GameObject Instantiate(object pinPointPrefab, Vector3 vector3, Quaternion identity)
+	{
+		throw new NotImplementedException();
+	}
+
+	public bool IsDisplayed() {
         return webViewObject.GetVisibility();
     }
 }
