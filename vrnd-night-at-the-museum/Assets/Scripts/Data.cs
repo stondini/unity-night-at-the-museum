@@ -25,13 +25,13 @@ public class Data {
 
 	private static readonly Data DOM = new Data(TYPE_MOUNTAIN, -3.068f, 0.85f, 1.17f, "Dom", "4545m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Dom_(mountain)");
 
-	private static readonly Data DENTS_DU_MIDI = new Data(TYPE_MOUNTAIN, 4.12f, 0.7f, 0.42f, "Dents du Midi", "3257m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Dents_du_Midi");
+	private static readonly Data DENTS_DU_MIDI = new Data(TYPE_MOUNTAIN, 4.12f, 0.7f, 0.42f, "Dents du Midi", "3257m", MEDIA_TYPE_WEBPAGE, "Media/Dents du Midi");
 
 	private static readonly Data MONT_BLANC = new Data(TYPE_MOUNTAIN, 3.82f, 0.8f, 2.957f, "Mont Blanc", "4808m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Mont_Blanc");
 
-	private static readonly Data GRAND_COMBIN = new Data(TYPE_MOUNTAIN, 1.26f, 0.8f, 3.017f, "Grand Combin", "4314m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Grand_Combin");
+	// private static readonly Data GRAND_COMBIN = new Data(TYPE_MOUNTAIN, 1.26f, 0.8f, 3.017f, "Grand Combin", "4314m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Grand_Combin");
 
-	private static readonly Data WILDHORN = new Data(TYPE_MOUNTAIN, 0.76f, 0.7f, -1.748f, "Wildhorn", "3248m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Wildhorn");
+	// private static readonly Data WILDHORN = new Data(TYPE_MOUNTAIN, 0.76f, 0.7f, -1.748f, "Wildhorn", "3248m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Wildhorn");
 
 	private static readonly Data ROCHERS_DE_NAYE = new Data(TYPE_MOUNTAIN, 2.665f, 0.5f, -3.89f, "Rochers de Naye", "2042m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Rochers_de_Naye");
 
@@ -51,7 +51,7 @@ public class Data {
         DOM, 
         DENTS_DU_MIDI, 
         MONT_BLANC, 
-        GRAND_COMBIN,
+        // GRAND_COMBIN,
         // WILDHORN,
         ROCHERS_DE_NAYE,
         SION,

@@ -11,11 +11,15 @@ public class AppController : MonoBehaviour {
 
 	public GameObject videoStationPrefab;
 
+	public GameObject wikipediaStationPrefab;
+
 	public GameObject pictureStationPrefab;
 
     private List<GameObject> pinPoints;
 
 	private GameObject videoStation;
+
+	private GameObject wikipediaStation;
     
 	private MediaManager mediaManager;
 
@@ -47,6 +51,9 @@ public class AppController : MonoBehaviour {
 
 		videoStation = Instantiate(videoStationPrefab, Vector3.zero, Quaternion.identity);      
 		videoStation.SetActive(false);
+
+		wikipediaStation = Instantiate(wikipediaStationPrefab, Vector3.zero, Quaternion.identity);
+		wikipediaStation.SetActive(false);
 
 		mediaManager = this.GetComponent<MediaManager>();
 		isMediaManagerRunning = false;
@@ -94,6 +101,7 @@ public class AppController : MonoBehaviour {
     {
 		Debug.Log(this+":"+pinPoint.name+":"+isMediaManagerRunning+":"+videoStation);
 		videoStation.SetActive(false);
+		wikipediaStation.SetActive(false);
 		if (!isMediaManagerRunning)
 		{
 			PinPoint script = pinPoint.GetComponent<PinPoint>();
@@ -101,8 +109,12 @@ public class AppController : MonoBehaviour {
 			Debug.Log(data.ToString());
 			if (data.mediaType == Data.MEDIA_TYPE_WEBPAGE)
 			{
-				//webViewObject.LoadURL(data.docURL.Replace(" ", "%20"));
-				//webViewObject.SetVisibility(true);
+				WikipediaStation wsScript = wikipediaStation.GetComponent<WikipediaStation>();
+				wsScript.LoadAndDisplay(
+                    new Vector3(pinPoint.transform.position.x + 0.1f, pinPoint.transform.position.y + 0.8f, pinPoint.transform.position.z),
+                    data.contentURL
+                );
+                isMediaManagerRunning = true; 
 			}
 			else if (data.mediaType == Data.MEDIA_TYPE_VIDEO)
 			{
