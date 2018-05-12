@@ -108,7 +108,7 @@ public class AppController : MonoBehaviour {
 			{
 				VideoStation vsScript = videoStation.GetComponent<VideoStation>();
 				vsScript.LoadAndDisplay(
-					new Vector3(pinPoint.transform.position.x, pinPoint.transform.position.y + (1.28f / 2f), pinPoint.transform.position.z),
+					new Vector3(pinPoint.transform.position.x, pinPoint.transform.position.y + 0.8f, pinPoint.transform.position.z),
 					data.contentURL
 				);
 				isMediaManagerRunning = true;            

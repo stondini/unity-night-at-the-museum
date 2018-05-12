@@ -38,8 +38,9 @@ public class Data {
 	private static readonly Data ROCHERS_DE_NAYE = new Data(TYPE_MOUNTAIN, 2.665f, 0.5f, -3.89f, "Rochers de Naye", "2042m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Rochers_de_Naye");
 
     // <iframe width = "560" height="315" src="https://www.youtube.com/embed/siFb-AoZqb8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	//private static readonly Data SION = new Data(TYPE_CITY, 0.96f, 0.32f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "Video-Sion.mp4");
-	private static readonly Data SION = new Data(TYPE_CITY, 1.4f, 0.45f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "Media/Video-Sion");
+	private static readonly Data SION = new Data(TYPE_CITY, 0.96f, 0.4f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "Media/Video-Sion");
+
+	private static readonly Data LEUKERBAD = new Data(TYPE_ATTRACTION, 0.16f, 0.4f, -0.5f, "Leukerbad", "Longest Via Ferrata", MEDIA_TYPE_VIDEO, "Media/Video-Leukerbad");
 
     public static readonly Data[] MOUNTAINS = new Data[] { 
         MATTERHORN, 
@@ -52,7 +53,8 @@ public class Data {
         GRAND_COMBIN,
         // WILDHORN,
         ROCHERS_DE_NAYE,
-        SION
+        SION,
+		LEUKERBAD
     };
 
 	public readonly int type;

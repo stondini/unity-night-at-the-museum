@@ -15,6 +15,7 @@ public class VideoStation : MonoBehaviour {
         Vector3 forward = Camera.main.transform.forward;
         forward.y = 0f;
         Quaternion rotation = Quaternion.LookRotation(forward);
+		rotation.x = - rotation.x;
         this.transform.rotation = rotation;
 	}
 
