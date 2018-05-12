@@ -25,9 +25,7 @@ using UnityEngine;
 public class MediaManager : MonoBehaviour
 {
     private WebViewObject webViewObject;
-
-	public GameObject videoStationPrefab;
-
+  
     IEnumerator Start()
     {
         string Url = "_blank";
@@ -164,12 +162,12 @@ public class MediaManager : MonoBehaviour
     {
 		if (data.mediaType == Data.MEDIA_TYPE_WEBPAGE)
         {
-			webViewObject.LoadURL(data.docURL.Replace(" ", "%20"));
+			webViewObject.LoadURL(data.contentURL.Replace(" ", "%20"));
             webViewObject.SetVisibility(true);         
         }
 		else if (data.mediaType == Data.MEDIA_TYPE_VIDEO)
         {
-			GameObject videoStation = Instantiate(videoStationPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
+			//GameObject videoStation = Instantiate(videoStationPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
         }
 		else if (data.mediaType == Data.MEDIA_TYPE_PICTURE)
         {

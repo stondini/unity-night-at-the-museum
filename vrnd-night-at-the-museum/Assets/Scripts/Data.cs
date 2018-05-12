@@ -38,7 +38,8 @@ public class Data {
 	private static readonly Data ROCHERS_DE_NAYE = new Data(TYPE_MOUNTAIN, 2.665f, 0.5f, -3.89f, "Rochers de Naye", "2042m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Rochers_de_Naye");
 
     // <iframe width = "560" height="315" src="https://www.youtube.com/embed/siFb-AoZqb8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	private static readonly Data SION = new Data(TYPE_CITY, 0.96f, 0.32f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "https://www.youtube.com/embed/siFb-AoZqb8");
+	//private static readonly Data SION = new Data(TYPE_CITY, 0.96f, 0.32f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "Video-Sion.mp4");
+	private static readonly Data SION = new Data(TYPE_CITY, 1.4f, 0.45f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "Media/Video-Sion");
 
     public static readonly Data[] MOUNTAINS = new Data[] { 
         MATTERHORN, 
@@ -66,11 +67,11 @@ public class Data {
 
     public readonly string shortInfo;
 
-    public readonly string docURL;
+    public readonly string contentURL;
 
 	public readonly int mediaType;
 
-	public Data(int type, float x, float y, float z, string name, string shortInfo, int mediaType, string docURL) {
+	public Data(int type, float x, float y, float z, string name, string shortInfo, int mediaType, string contentURL) {
 		this.type = type;
         this.x = x;
         this.y = y;
@@ -78,10 +79,10 @@ public class Data {
         this.name = name;
 		this.shortInfo = shortInfo;
 		this.mediaType = mediaType;
-        this.docURL = docURL;
+		this.contentURL = contentURL;
     }
 
     public override string ToString() {
-        return string.Format("{0}: ({1:f},{2:f},{3:f})", this.name, this.x, this.y, this.z);
+		return string.Format("{0}:({1:f},{2:f},{3:f}:type={4}:media={5}:content={6})", this.name, this.x, this.y, this.z, this.type, this.mediaType, this.contentURL);
     }
 }
