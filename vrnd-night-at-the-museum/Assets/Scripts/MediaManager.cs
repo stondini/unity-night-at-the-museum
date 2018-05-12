@@ -169,10 +169,6 @@ public class MediaManager : MonoBehaviour
         {
 			//GameObject videoStation = Instantiate(videoStationPrefab, new Vector3(data.x, data.y, data.z), Quaternion.identity);
         }
-		else if (data.mediaType == Data.MEDIA_TYPE_PICTURE)
-        {
-
-        }
     }
 
 	private static GameObject Instantiate(object pinPointPrefab, Vector3 vector3, Quaternion identity)

@@ -42,20 +42,4 @@ public class PinPoint : MonoBehaviour {
             iconRenderer.material = Resources.Load("Materials/PictureIcon", typeof(Material)) as Material;
         }
 	}
-
-    public void Click() {
-		/*
-		if (data.type == Data.TYPE_MOUNTAIN)
-		{
-			MediaManager.Show(data, Vector3.zero);
-		} else if (data.type == Data.TYPE_CITY) {
-			
-		} else if (data.type == Data.TYPE_ATTRACTION) {
-			
-		} else if (data.type == Data.TYPE_PICTURE)
-        {
-
-        }
-        */
-    }
 }

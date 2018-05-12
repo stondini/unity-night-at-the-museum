@@ -83,6 +83,7 @@ Last step is to code all the glue :
     <li>Waypoints navigation. This could be the same code as <i>A Maze</i> project.</li>
     <li>UI interactions.</li>
     <li>UI WebView to display the Wikipedia page of the selected mountains.</li>
+    <li>Video clips.</li>
 </ul>
 </p>
 
@@ -175,7 +176,7 @@ The tester said he has the impression of "falling down" when he navigates near t
   </tr>
 </table>
 
-<h2> Movement - User Testing </h2>
+<h2>Movement - User Testing </h2>
 <table>
   <tr>
     <th>Question</th>
@@ -241,12 +242,13 @@ The WebView is not good. Maybe I should consider a commercial WebView. I could a
 <p>
 <b>Night at the Museum</b> VR project was ambishious.<br/>
 It was interesting because I played few other roles than VR Developer.<br/>
-It was also challenging because of the three next points.<br/>
+It was also challenging because of the next points.<br/>
 </p>
-Three points in the project was tough to implement :
+Some points in the project was tough to implement or causing issues:
 <ol>
     <li>Using Blender App to create the mesh and map the texture. Blender is not a simple app. I read few tutorials to achieve the mesh and texture mapping.</li>
     <li>Finding and using a WebView. Unity doesn't provide a builtin WebView so I found one.<br/>The result is not perfect because the view is not fully integrated in to the canvas or the scene.</li>
+    <li>I made the video clips using iMovie and exported them in MP4 format (720p). But Unity video player renders the clips with a poor quality (there a lot of issues <a href="https://forum.unity.com/threads/video-player-some-mp4-working-some-not.464665/">here</a>). So, I used Handbrake to re-encode the video clips using <b>Web Optimization</b>.</li>
     <li>A lack of time to implement a better result. Two weeks is too short.</li>
 </ol>
 <p>

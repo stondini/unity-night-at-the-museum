@@ -113,10 +113,6 @@ public class AppController : MonoBehaviour {
 				);
 				isMediaManagerRunning = true;            
 			}
-			else if (data.mediaType == Data.MEDIA_TYPE_PICTURE)
-			{
-
-			}
 		} else {
 			isMediaManagerRunning = false;
 		}

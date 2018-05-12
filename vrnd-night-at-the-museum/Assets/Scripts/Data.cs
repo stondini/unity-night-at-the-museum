@@ -15,8 +15,6 @@ public class Data {
 
 	public static readonly int MEDIA_TYPE_VIDEO = 2;
 
-	public static readonly int MEDIA_TYPE_PICTURE = 2;
-
 	private static readonly Data MATTERHORN = new Data(TYPE_MOUNTAIN, -1.5f, 0.8f, 2.5f, "Matterhorn", "4478m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Matterhorn");
 
 	private static readonly Data EIGER = new Data(TYPE_MOUNTAIN, -4.157f, 0.8f, -4.24f, "Eiger", "3967m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Eiger");
@@ -37,10 +35,13 @@ public class Data {
 
 	private static readonly Data ROCHERS_DE_NAYE = new Data(TYPE_MOUNTAIN, 2.665f, 0.5f, -3.89f, "Rochers de Naye", "2042m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Rochers_de_Naye");
 
-    // <iframe width = "560" height="315" src="https://www.youtube.com/embed/siFb-AoZqb8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	private static readonly Data SION = new Data(TYPE_CITY, 0.96f, 0.4f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "Media/Video-Sion");
+	private static readonly Data SION = new Data(TYPE_CITY, 0.96f, 0.43f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "Media/Video-Sion");
 
-	private static readonly Data LEUKERBAD = new Data(TYPE_ATTRACTION, 0.16f, 0.4f, -0.5f, "Leukerbad", "Longest Via Ferrata", MEDIA_TYPE_VIDEO, "Media/Video-Leukerbad");
+	private static readonly Data LEUKERBAD = new Data(TYPE_ATTRACTION, 0.16f, 0.43f, -0.5f, "Leukerbad", "Longest Via Ferrata", MEDIA_TYPE_VIDEO, "Media/Video-Leukerbad");
+
+	private static readonly Data OVRONNAZ = new Data(TYPE_ATTRACTION, 2.6f, 0.43f, 0.03f, "Ovronnaz", "Thermal Baths", MEDIA_TYPE_VIDEO, "Media/Video-Ovronnaz");
+
+	private static readonly Data EVOLENE = new Data(TYPE_PICTURE, -0.95f, 0.43f, 0.06f, "Evolène", "Nature & Hiking", MEDIA_TYPE_VIDEO, "Media/Video-Evolene");
 
     public static readonly Data[] MOUNTAINS = new Data[] { 
         MATTERHORN, 
@@ -54,7 +55,9 @@ public class Data {
         // WILDHORN,
         ROCHERS_DE_NAYE,
         SION,
-		LEUKERBAD
+		LEUKERBAD,
+		OVRONNAZ,
+		EVOLENE
     };
 
 	public readonly int type;
