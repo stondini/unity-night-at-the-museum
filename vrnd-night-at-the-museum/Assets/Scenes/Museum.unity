@@ -1135,7 +1135,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4976072989789196, guid: f5bcca299230e45d18db7f92698f55fb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.328
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4976072989789196, guid: f5bcca299230e45d18db7f92698f55fb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1159,7 +1159,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4976072989789196, guid: f5bcca299230e45d18db7f92698f55fb, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1421459144949986, guid: f5bcca299230e45d18db7f92698f55fb, type: 2}
       propertyPath: m_Name
@@ -1230,7 +1230,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4714341393786862, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb5066707501493b808fc8af8468fb9, type: 2}
@@ -1835,9 +1835,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Click on the green pinpoint to show the description.
+  m_Text: 'Click on the pinpoint to show the station info.
 
-    Double click to close.'
+    Single click to close.'
 --- !u!222 &1373971271
 CanvasRenderer:
   m_ObjectHideFlags: 0

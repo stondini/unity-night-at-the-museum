@@ -21,9 +21,7 @@ public class AppController : MonoBehaviour {
 
 	private GameObject wikipediaStation;
     
-	private MediaManager mediaManager;
-
-	private bool isMediaManagerRunning = false;
+	private bool isStationRunning = false;
     
 	// Use this for initialization
 	void Start () {
@@ -54,22 +52,31 @@ public class AppController : MonoBehaviour {
 		wikipediaStation = Instantiate(wikipediaStationPrefab, Vector3.zero, Quaternion.identity);
 		wikipediaStation.SetActive(false);
 
-		mediaManager = this.GetComponent<MediaManager>();
-		isMediaManagerRunning = false;
+		isStationRunning = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         foreach (GameObject pinPoint in this.pinPoints) {
             // Disable pinPoint if the web view is displayed
-			// pinPoint.SetActive(!isMediaManagerRunning);
+			pinPoint.SetActive(!isStationRunning);
         }
         // Disable waypoint if the web view is displayed
 		foreach (GameObject wayPoint in wayPoints)
         {
-			wayPoint.SetActive(!isMediaManagerRunning);
+			wayPoint.SetActive(!isStationRunning);
         }
 	}
+
+	void OnGUI()
+    {
+        if (Event.current.isMouse && Event.current.button == 0 && Event.current.clickCount > 0)
+        {
+			isStationRunning = false;
+			videoStation.SetActive(false);
+            wikipediaStation.SetActive(false);
+        }
+    }
 
 	private void setAltitudeTo(float altitudeY)
     {
@@ -94,34 +101,37 @@ public class AppController : MonoBehaviour {
 
 	public void PinPointClick(GameObject pinPoint)
     {
-		Debug.Log(this+":"+pinPoint.name+":"+isMediaManagerRunning+":"+videoStation);
 		videoStation.SetActive(false);
 		wikipediaStation.SetActive(false);
-		if (!isMediaManagerRunning)
+		if (!isStationRunning)
 		{
 			PinPoint script = pinPoint.GetComponent<PinPoint>();
 			Data data = script.GetData();
-			Debug.Log(data.ToString());
 			if (data.mediaType == Data.MEDIA_TYPE_WEBPAGE)
 			{
 				WikipediaStation wsScript = wikipediaStation.GetComponent<WikipediaStation>();
+
+				Vector3 newPosition = pinPoint.transform.position + (Camera.main.transform.forward * 3.0f);
+
 				wsScript.LoadAndDisplay(
-                    new Vector3(pinPoint.transform.position.x + 0.1f, pinPoint.transform.position.y + 0.8f, pinPoint.transform.position.z),
+					new Vector3(newPosition.x, 
+					            3.0f, 
+					            newPosition.z),
                     data.contentURL
                 );
-                isMediaManagerRunning = true; 
+                isStationRunning = true; 
 			}
 			else if (data.mediaType == Data.MEDIA_TYPE_VIDEO)
 			{
 				VideoStation vsScript = videoStation.GetComponent<VideoStation>();
 				vsScript.LoadAndDisplay(
-					new Vector3(pinPoint.transform.position.x, pinPoint.transform.position.y + 0.8f, pinPoint.transform.position.z),
+					new Vector3(pinPoint.transform.position.x, 0.7f, pinPoint.transform.position.z),
 					data.contentURL
 				);
-				isMediaManagerRunning = true;            
+				isStationRunning = true;            
 			}
 		} else {
-			isMediaManagerRunning = false;
+			isStationRunning = false;
 		}
     }
 }

@@ -11,6 +11,46 @@ Goals of this write up :
     <li>What are the next amazing steps likely to interest the audience.</li>
 </lu>
 
+<h1>Post Review Modifications</h1>
+<b>Below the review comments</b>
+<i>
+<p>Virtual tour of mountains and other natural wonders can be used as one of the stations. But an application about the Alps mountains alone misses the objective of the project. I suggest you rethink the scope of the project and prepare other stations as well.</p>
+<p>One of the specifications in the rubric requires that you assign a unique audio file for each station. Currently, only the wind sound effect is used at all the stations.</p>
+</i>
+<b>Modifications</b>
+<ul>
+    <li>UI WebView has been removed because it caused a lot of issues. I used a Canvas with text and image instead.</li>
+    <li>Video clips contains new different sounds. I used <i>iMovie</i> to edit and add music/sound.</li>
+    <li>Added few other kind of stations :
+        <table>
+  <tr>
+    <td>Touristic Attraction</td>
+    <td><img src="AttractionIcon.png" width="128"/></td>
+  </tr>
+  <tr>
+    <td>City</td>
+    <td><img src="CityIcon.png" width="128"/></td>
+  </tr>
+  <tr>
+    <td>Sightseeing</td>
+    <td><img src="PictureIcon.png" width="128"/></td>
+  </tr>
+  <tr>
+    <td>Mountain</td>
+    <td><img src="MountainIcon.png" width="128"/></td>
+  </tr>
+</table>
+    </li>
+</ul>
+<b>User Testing</b>
+<p>
+Testing the review's modifications implies few comments.
+<ul>
+    <li>Video clips are too high in the sky <i>(so, I reduced the altitude).</i></li>
+    <li>Mountain description panels are also too high in the sky and too big <i>(so, I reduced the altitude ans the size).</i></li>
+</ul>
+</p>
+
 <h1>Outcome - Checkout the final video</h1>
 
 <a href="https://youtu.be/L5ElBNnhzKw">Outcome video</a>
@@ -236,7 +276,7 @@ Waypoints will be removed and replaced by a navigation system that requires spec
 The skybox should be reviewed to avoid the sharp borders. This will avoid the visitor remark <i>Ha ! I'm going to fall....</i>
 </p>
 <p>
-The WebView is not good. Maybe I should consider a commercial WebView. I could also check if the last Unity version provides a WebView.
+The WebView is not good. Maybe I should consider a commercial WebView. I could also check if the last Unity version provides a WebView (<i>The WebView has been removed after the review)</i>).
 </p>
 <h1>Conclusion</h1>
 <p>

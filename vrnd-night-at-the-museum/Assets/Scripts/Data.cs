@@ -39,7 +39,7 @@ public class Data {
 
 	private static readonly Data LEUKERBAD = new Data(TYPE_ATTRACTION, 0.16f, 0.43f, -0.5f, "Leukerbad", "Longest Via Ferrata", MEDIA_TYPE_VIDEO, "Media/Video-Leukerbad");
 
-	private static readonly Data OVRONNAZ = new Data(TYPE_ATTRACTION, 2.6f, 0.43f, 0.03f, "Ovronnaz", "Thermal Baths", MEDIA_TYPE_VIDEO, "Media/Video-Ovronnaz");
+	private static readonly Data OVRONNAZ = new Data(TYPE_ATTRACTION, 2.6f, 0.5f, 0.03f, "Ovronnaz", "Thermal Baths", MEDIA_TYPE_VIDEO, "Media/Video-Ovronnaz");
 
 	private static readonly Data EVOLENE = new Data(TYPE_PICTURE, -0.95f, 0.43f, 0.06f, "Evolène", "Nature & Hiking", MEDIA_TYPE_VIDEO, "Media/Video-Evolene");
 

@@ -12,4 +12,3 @@ This project is part of [Udacity](https://www.udacity.com "Udacity - Be in deman
 - Swiss Tourism Office (for video clips)
 - iTween 2.0.9 (http://itween.pixelplacement.com)
 - Sound effects (http://soundbible.com)
-- Unity WebView (https://github.com/gree/unity-webview)

@@ -22,7 +22,7 @@ public class VideoStation : MonoBehaviour {
 	public void LoadAndDisplay(Vector3 position, string contentURL) {
 		gameObject.transform.position = position;
 		VideoPlayer videoPlayer = gameObject.GetComponent<VideoPlayer>();
-        videoPlayer.clip = Resources.Load(contentURL, typeof(VideoClip)) as VideoClip;
+		videoPlayer.clip = Resources.Load<VideoClip>(contentURL);
 		videoPlayer.skipOnDrop = false;
         videoPlayer.Play();
 		gameObject.SetActive(true);
