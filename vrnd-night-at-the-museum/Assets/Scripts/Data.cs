@@ -15,25 +15,25 @@ public class Data {
 
 	public static readonly int MEDIA_TYPE_VIDEO = 2;
 
-	private static readonly Data MATTERHORN = new Data(TYPE_MOUNTAIN, -1.5f, 0.8f, 2.5f, "Matterhorn", "4478m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Matterhorn");
+	private static readonly Data MATTERHORN = new Data(TYPE_MOUNTAIN, -1.5f, 0.8f, 2.5f, "Matterhorn", "4478m", MEDIA_TYPE_WEBPAGE, "Media/Matterhorn");
 
-	private static readonly Data EIGER = new Data(TYPE_MOUNTAIN, -4.157f, 0.8f, -4.24f, "Eiger", "3967m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Eiger");
+	private static readonly Data EIGER = new Data(TYPE_MOUNTAIN, -4.157f, 0.8f, -4.24f, "Eiger", "3967m", MEDIA_TYPE_WEBPAGE, "Media/Eiger");
     
-	private static readonly Data MONCH = new Data(TYPE_MOUNTAIN, -4.09f, 0.8f, -3.963f, "Mönch", "4101m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/M%C3%B6nch");
+	private static readonly Data MONCH = new Data(TYPE_MOUNTAIN, -4.09f, 0.8f, -3.963f, "Mönch", "4101m", MEDIA_TYPE_WEBPAGE, "Media/Monch");
 
-	private static readonly Data JUNGFRAU = new Data(TYPE_MOUNTAIN, -3.857f, 0.8f, -3.746f, "Jungfrau", "4158m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Jungfrau");
+	private static readonly Data JUNGFRAU = new Data(TYPE_MOUNTAIN, -3.857f, 0.8f, -3.746f, "Jungfrau", "4158m", MEDIA_TYPE_WEBPAGE, "Media/Jungfrau");
 
-	private static readonly Data DOM = new Data(TYPE_MOUNTAIN, -3.068f, 0.85f, 1.17f, "Dom", "4545m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Dom_(mountain)");
+	private static readonly Data DOM = new Data(TYPE_MOUNTAIN, -3.068f, 0.85f, 1.17f, "Dom", "4545m", MEDIA_TYPE_WEBPAGE, "Media/Dom");
 
 	private static readonly Data DENTS_DU_MIDI = new Data(TYPE_MOUNTAIN, 4.12f, 0.7f, 0.42f, "Dents du Midi", "3257m", MEDIA_TYPE_WEBPAGE, "Media/Dents du Midi");
 
-	private static readonly Data MONT_BLANC = new Data(TYPE_MOUNTAIN, 3.82f, 0.8f, 2.957f, "Mont Blanc", "4808m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Mont_Blanc");
+	private static readonly Data MONT_BLANC = new Data(TYPE_MOUNTAIN, 3.82f, 0.8f, 2.957f, "Mont Blanc", "4808m", MEDIA_TYPE_WEBPAGE, "Media/Mont Blanc");
 
 	// private static readonly Data GRAND_COMBIN = new Data(TYPE_MOUNTAIN, 1.26f, 0.8f, 3.017f, "Grand Combin", "4314m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Grand_Combin");
 
 	// private static readonly Data WILDHORN = new Data(TYPE_MOUNTAIN, 0.76f, 0.7f, -1.748f, "Wildhorn", "3248m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Wildhorn");
 
-	private static readonly Data ROCHERS_DE_NAYE = new Data(TYPE_MOUNTAIN, 2.665f, 0.5f, -3.89f, "Rochers de Naye", "2042m", MEDIA_TYPE_WEBPAGE, "https://en.wikipedia.org/wiki/Rochers_de_Naye");
+	private static readonly Data ROCHERS_DE_NAYE = new Data(TYPE_MOUNTAIN, 2.665f, 0.5f, -3.89f, "Rochers de Naye", "2042m", MEDIA_TYPE_WEBPAGE, "Media/Rochers de Naye");
 
 	private static readonly Data SION = new Data(TYPE_CITY, 0.96f, 0.43f, -0.27f, "Sion", "City & Castle", MEDIA_TYPE_VIDEO, "Media/Video-Sion");
 
