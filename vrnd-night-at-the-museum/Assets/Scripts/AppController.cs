@@ -27,7 +27,6 @@ public class AppController : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        //Camera.main.transform.parent.transform.position = new Vector3(4.75f, 0.4f, -4);
         Camera.main.transform.parent.transform.position = new Vector3(0f, 0.4f, -4);
 
         this.pinPoints = new List<GameObject>();
@@ -62,17 +61,13 @@ public class AppController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         foreach (GameObject pinPoint in this.pinPoints) {
-            Vector3 forward = Camera.main.transform.forward;
-            forward.y = 0f;
-            Quaternion rotation = Quaternion.LookRotation(forward);
-			pinPoint.transform.rotation = rotation;
             // Disable pinPoint if the web view is displayed
-			pinPoint.SetActive(!mediaManager.IsDisplayed());
+			// pinPoint.SetActive(!isMediaManagerRunning);
         }
         // Disable waypoint if the web view is displayed
 		foreach (GameObject wayPoint in wayPoints)
         {
-			wayPoint.SetActive(!mediaManager.IsDisplayed());
+			wayPoint.SetActive(!isMediaManagerRunning);
         }
 	}
 

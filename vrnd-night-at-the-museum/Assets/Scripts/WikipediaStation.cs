@@ -24,8 +24,11 @@ public class WikipediaStation : MonoBehaviour {
 	}
     
 	public void LoadAndDisplay(Vector3 position, string contentURL) {
-		image.texture = Resources.Load(contentURL, typeof(Texture2D)) as Texture2D;
-		text.text = (Resources.Load(contentURL, typeof(Text)) as Text).text;
+		image.texture = Resources.Load<Texture2D>(contentURL);
+		TextAsset textAsset = Resources.Load<TextAsset>(contentURL);
+		Debug.Log(textAsset);
+		Debug.Log(contentURL + ":" + textAsset);
+		text.text = textAsset.text;
 		gameObject.transform.position = position;      
 		gameObject.SetActive(true);
 	}

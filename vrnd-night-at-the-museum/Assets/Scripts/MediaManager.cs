@@ -26,7 +26,7 @@ public class MediaManager : MonoBehaviour
 {
     private WebViewObject webViewObject;
   
-    IEnumerator Start()
+    IEnumerator Start2()
     {
         string Url = "_blank";
         webViewObject = (new GameObject("WebViewObject")).AddComponent<WebViewObject>();

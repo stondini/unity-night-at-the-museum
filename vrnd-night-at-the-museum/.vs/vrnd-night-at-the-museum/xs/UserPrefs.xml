@@ -1,18 +1,10 @@
 ﻿<Properties StartupConfiguration="{E9B082B3-8690-5A69-9051-E9BE450368D7}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WikipediaStation.cs">
     <Files>
-      <File FileName="Assets/Scripts/AppController.cs" Line="115" Column="5" />
-      <File FileName="Assets/Scripts/Waypoint.cs" Line="65" Column="86" />
-      <File FileName="Assets/GoogleVR/Scripts/EventSystem/GvrPointerPhysicsRaycaster.cs" Line="1" Column="1" />
-      <File FileName="Assets/GoogleVR/Scripts/EventSystem/GvrPointerGraphicRaycaster.cs" Line="1" Column="1" />
-      <File FileName="Assets/GoogleVR/Scripts/GvrSettings.cs" Line="1" Column="1" />
-      <File FileName="Assets/GoogleVR/Scripts/GvrEditorEmulator.cs" Line="1" Column="1" />
-      <File FileName="Assets/GoogleVR/Scripts/UI/GvrReticlePointer.cs" Line="67" Column="79" />
-      <File FileName="Assets/Scripts/Data.cs" Line="36" Column="189" />
-      <File FileName="Assets/Scripts/PinPoint.cs" Line="40" Column="33" />
-      <File FileName="Assets/Scripts/MediaManager.cs" Line="171" Column="10" />
-      <File FileName="Assets/Scripts/VideoStation.cs" Line="26" Column="34" />
-      <File FileName="Assets/Scripts/WikipediaStation.cs" Line="6" Column="30" />
+      <File FileName="Assets/Scripts/Data.cs" Line="20" Column="130" />
+      <File FileName="Assets/Resources/Media/Eiger.txt" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AppController.cs" Line="30" Column="1" />
+      <File FileName="Assets/Scripts/WikipediaStation.cs" Line="30" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.vrnd-a-maze PreferredExecutionTarget="Unity.Editor" />
